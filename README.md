@@ -1,6 +1,13 @@
 # VC Tech Test - Playwright Automation
 
-A Playwright test automation project for testing web applications with comprehensive configuration and multiple execution modes.
+## Requirements
+  ● Runnable through the command line
+  ● One test that successfully performs a search for offers in local restaurants in London, on any
+  given day, for an given number of people.
+  ● One test that fails (on purpose!) and will provide useful data for debugging (think logs,
+  screenshots, videos, etc.)
+  ● Written in JavaScript
+
 
 ## Table of Contents
 
@@ -13,8 +20,7 @@ A Playwright test automation project for testing web applications with comprehen
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
   - [Use Options](#use-options)
-- [Test Structure](#test-structure)
-
+  - [Debug Mode Usage](#debug-mode-usage)
 
 ## Overview
 
@@ -32,7 +38,6 @@ This project uses Playwright for end-to-end testing with a focus on reliability,
    ```bash
    npm install
    ```
-
 3. Install Playwright browsers:
    ```bash
    npx playwright install
@@ -64,13 +69,6 @@ The project includes several npm scripts for different testing scenarios:
 #### CLI Flags and Options
 
 Playwright provides various command-line flags for different testing scenarios:
-
-##### Core Execution Flags
-
-- **`--project=chromium`** - Run tests only on Chromium browser (faster execution)
-- **`--headed`** - Run tests with visible browser window instead of headless mode
-- **`--debug`** - Run tests in debug mode with step-by-step execution and browser dev tools
-- **`--ui`** - Open Playwright's interactive UI for running and debugging tests
 
 ##### Debugging and Development Flags
 
@@ -117,14 +115,6 @@ The `use` configuration object contains shared settings for all tests:
 - **`video: 'retain-on-failure'`** - Records videos only for failed tests, helpful for visual debugging
 - **`testIdAttribute: 'data-qa'`** - Uses `data-qa` attributes as test selectors for more reliable element targeting
 
-### Test Structure
-
-Tests are organized with descriptive filenames and follow a clear naming convention:
-- `01-performsSearch.spec.js` - Search functionality tests
-- `02-emailUnicode.spec.js` - Email validation and Unicode handling tests
-
-The project uses the Page Object Model pattern for maintainable and reusable test code.
-
 ### Debug Mode Usage
 
 When using debug mode (`npm run test:debug`):
@@ -132,9 +122,3 @@ When using debug mode (`npm run test:debug`):
 2. Browser dev tools are available
 3. You can step through test execution
 4. Inspect elements and network requests
-
-### Getting Help
-
-- [Playwright Documentation](https://playwright.dev/docs/intro)
-- [Playwright API Reference](https://playwright.dev/docs/api/class-playwright)
-- [Playwright Test Configuration](https://playwright.dev/docs/test-configuration)
