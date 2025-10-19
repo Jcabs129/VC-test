@@ -1,11 +1,14 @@
 # VC Tech Test - Playwright Automation
 
-## Requirements
+### Requirements
   ● Runnable through the command line
+
   ● One test that successfully performs a search for offers in local restaurants in London, on any
   given day, for an given number of people.
+
   ● One test that fails (on purpose!) and will provide useful data for debugging (think logs,
   screenshots, videos, etc.)
+
   ● Written in JavaScript
 
 
