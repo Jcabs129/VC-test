@@ -6,7 +6,11 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npx playwright test --project=chromium --reporter=list"
+    "test": "npx playwright test",
+    "test:debug": "npx playwright test --project=chromium --headed --debug ",
+    "test:ui": "npx playwright --project=chromium --ui",
+    "test:headed": "npx playwright test --project=chromium --headed",
+    "test:report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
