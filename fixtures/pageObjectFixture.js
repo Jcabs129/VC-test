@@ -4,15 +4,12 @@ import { RestaurantVoucherPage } from '../pages/restaurantVoucher.page'
 
 
 
-export type FrameworkFixtures = {
-    landingPage: LandingPage;
+export const FrameworkFixtures = {
+    landingPage: LandingPage,
     restaurantVoucherPage: RestaurantVoucherPage
 }
 
-export const test = base.extend<{
-  landingPage: LandingPage;
-  restaurantVoucherPage: RestaurantVoucherPage;
-}>({
+export const test = base.extend({
 
   landingPage: async ({ page }, use) => {
     await use(new LandingPage(page));

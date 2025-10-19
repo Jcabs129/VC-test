@@ -6,7 +6,6 @@ test.describe('Negative test', () => {
     await landingPage.handleCookiePopups();
   });
 
-  // TODO:: add erro logging
   test('Negative test - email test containing unicode', async ({ landingPage, restaurantVoucherPage }) => {
     await landingPage.performSearch();
     await restaurantVoucherPage.registerUnicodeEmail();

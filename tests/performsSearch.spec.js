@@ -7,7 +7,7 @@ test.describe('Performs Search', () => {
   });
 
   /*
-  One test that successfully performs a search for offers in local restaurants in London, on any given day, for an given number of people.
+  **One test that successfully performs a search for offers in local restaurants in London, on any given day, for an given number of people.
   */ 
   test('User can perform a search', async ({ landingPage, restaurantVoucherPage }) => {
     await landingPage.performSearch();
