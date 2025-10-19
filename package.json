@@ -1,0 +1,19 @@
+{
+  "name": "vc-tech-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npx playwright test --project=chromium --reporter=list"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.2"
+  }
+}
