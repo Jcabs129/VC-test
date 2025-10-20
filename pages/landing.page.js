@@ -1,5 +1,4 @@
 import { expect } from "@playwright/test";
-import { selectSearchWords } from "../utils/randomSelectionHelpers";
 import { landingPage } from "../tests/test-data/uiText";
 
 export class LandingPage {
@@ -20,7 +19,7 @@ export class LandingPage {
   }
 
   async performSearch() {
-    await this.page.getByTestId('el:searchInput').fill(selectSearchWords);
+    await this.page.getByTestId('el:searchInput').fill('restaurants');
     await this.page.getByTestId('el:searchInput').press('Enter');
     await expect(this.page.getByRole('heading', { name: landingPage.headingText })).toBeVisible();
   }
