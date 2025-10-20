@@ -1,17 +1,21 @@
 # VC Tech Test - Playwright Automation
 
+## Overview
+
+This project uses Playwright for UI e2e tests written in javascript. If any tests fail, the Playwright HTML reporter will automatically open at the end of the run, displaying a recording and screenshot at located bottom of the page.
+
+I've also added a try/catch block with error logging in the negative test (restaurantVoucher.page.js) to ensure we capture precise error messages, which helps speed up debugging.
+
+In the `package.json`, I’ve added scripts to assist with debugging, running the UI tests, and launching the browser in headed or headless mode. These are explained under the Available Scripts section. Make sure to run them using the `npm run` command.
+
 ### Requirements
 
 - Runnable through the command line
-
 - One test that successfully performs a search for offers in local restaurants in London, on any
   given day, for an given number of people.
-
 - One test that fails (on purpose!) and will provide useful data for debugging (think logs,
   screenshots, videos, etc.)
-
 - Written in JavaScript
-
 
 ## Table of Contents
 
@@ -26,9 +30,6 @@
   - [Use Options](#use-options)
   - [Debug Mode Usage](#debug-mode-usage)
 
-## Overview
-
-This project uses Playwright for end-to-end testing with a focus on reliability, debugging capabilities, and comprehensive reporting. The configuration is optimized for both local development and CI/CD environments.
 
 ## Prerequisites
 
@@ -76,10 +77,11 @@ Playwright provides various command-line flags for different testing scenarios:
 
 ##### Debugging and Development Flags
 
+These particular flags/ options were added on the playwright.config file, only when tess fail will it record the flow and will also take a screen shot for better visibility.
+
 - **`--trace on`** - Record detailed traces for all tests
 - **`--video on`** - Record videos for all tests
 - **`--screenshot on`** - Take screenshots for all tests
-- **`--slow-mo=1000`** - Add 1-second delay between actions (useful for debugging)
 
 ## Project Structure
 
@@ -114,6 +116,7 @@ vc-tech-test/
 ### Use Options
 
 The `use` configuration object contains shared settings for all tests:
+
 - **`trace: 'on-first-retry'`** - Captures detailed execution traces when tests fail and retry, useful for debugging
 - **`screenshot: 'only-on-failure'`** - Takes screenshots only when tests fail, saving storage space
 - **`video: 'retain-on-failure'`** - Records videos only for failed tests, helpful for visual debugging
