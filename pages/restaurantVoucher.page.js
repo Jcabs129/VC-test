@@ -17,6 +17,7 @@ export class RestaurantVoucherPage {
 
    async registerUnicodeEmail() {
     await this.page.getByRole('button', { name: voucherPage.sendNewCodeBtnTxt }).click();
+    await expect(this.page.getByPlaceholder(voucherPage.placeHolderEmailTxt)).toBeVisible();
     await this.page.getByPlaceholder(voucherPage.placeHolderEmailTxt).fill('user+test@domain.com');
     await this.page.getByRole('button', { name: voucherPage.sendNewCodeBtnTxt }).click();
     

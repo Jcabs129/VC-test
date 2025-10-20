@@ -6,7 +6,7 @@ This project uses Playwright for UI e2e tests written in javascript. If any test
 
 I've also added a try/catch block with error logging in the negative test (restaurantVoucher.page.js) to ensure we capture precise error messages, which helps speed up debugging.
 
-In the `package.json`, I’ve added scripts to assist with debugging, running the UI tests, and launching the browser in headed or headless mode. These are explained under the Available Scripts section. Make sure to run them using the `npm run` command.
+In the `package.json`, I’ve added scripts to assist with debugging, running the UI tests, and launching the browser in headed or headless mode. These are explained under the "Available Scripts" section. Make sure to run them using the `npm run` command.
 
 ### Requirements
 
