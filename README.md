@@ -1,14 +1,20 @@
 # VC Tech Test - Playwright Automation
 
-## Overview
-
 This project uses Playwright for UI e2e tests written in javascript. If any tests fail, the Playwright HTML reporter will automatically open at the end of the run, displaying a recording and screenshot at located bottom of the page.
+
+## Overview
 
 In `utils/randomSelectionHelpers.js`, a small list of London postcodes is defined alongside a helper that selects one at random to provide realistic postcode input during tests.
 
 I've also added a try/catch block with error logging in the negative test (restaurantVoucher.page.js) to ensure we capture precise error messages, which helps speed up debugging.
 
 In the `package.json`, I’ve added scripts to assist with debugging, running the UI tests, and launching the browser in headed or headless mode. These are explained under the "Available Scripts" section. Make sure to run them using the `npm run` command.
+
+### Bonus
+
+In `utils/randomSelectionHelpers.js`, a small list of London postcodes is defined alongside a helper that selects one at random to provide realistic postcode input during tests.
+
+I've added a workflow to demonstrate how the UI test suite would run when pull requests are pushed to the main branch. The workflow is intentionally disabled for now, as the tests currently point to the production environment.
 
 
 ### Requirements
