@@ -47,7 +47,7 @@ I've added a workflow to demonstrate how the UI test suite would run when pull r
 
 ## Installation
 
-1. Clone the repository
+1. git clone https://github.com/Jcabs129/VC-test.git
 2. Install dependencies:
    ```bash
    npm install
